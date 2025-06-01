@@ -17,13 +17,15 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div className="navbar py-10 flex items-center justify-between px-2 md:px-2">
+    <nav className="navbar py-10 flex items-center justify-between px-2 md:px-2">
       <div className="logo flex items-center">
         <h1 className="text-6xl font-bold p-1 md:bg-transparent md:text-black md:ml-0 ml-0">
           Portofolio
         </h1>
       </div>
       <ul
+        role="navigation"
+        aria-label="Main menu"
         className={`menu flex items-center sm:gap-10 gap-4 md:static fixed left-1/2 -translate-x-1/2 md:-translate-x-0 md:opacity-100 md:bg-transparent bg-gray-200 p-4 rounded-br-2xl rounded-bl-2xl transition-all md:transition-none z-40 ${
           active ? "top-0 opacity-100" : "-top-10 opacity-0"
         }`}
@@ -61,7 +63,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
