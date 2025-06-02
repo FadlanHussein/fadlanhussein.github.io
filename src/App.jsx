@@ -220,10 +220,12 @@ function App() {
                   </div>
                   <div className="mt-8 text-center">
                     <a
-                      href="#project"
+                      href={project.demourl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p=3 rounded-lg block border hover:bg-cyan-700 hover:text-white transition duration-300 bg-gray-200 text-cyan-700 font-semibold text-lg text-center"
                     >
-                      Lihat Project
+                      Lihat Project <i className="ri-external-link-line"></i>
                     </a>
                   </div>
                 </div>

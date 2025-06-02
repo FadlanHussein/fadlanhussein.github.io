@@ -98,7 +98,7 @@ export const listTools = [
   },
 ];
 
-import Project1 from "/assets/project/proyek1.webp";
+import Project1 from "/assets/project/proyek1.png";
 import Project2 from "/assets/project/proyek2.webp";
 import Project3 from "/assets/project/proyek3.webp";
 import Project4 from "/assets/project/proyek4.webp";
@@ -109,10 +109,11 @@ export const listProject = [
   {
     id: 1,
     gambar: Project1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    nama: "Digital Clock",
+    desk: "Berikut ini adalah contoh proyek jam digital sederhana",
+    tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
+    demourl: "https://task-15-digital-clock.vercel.app/",
   },
   {
     id: 2,
