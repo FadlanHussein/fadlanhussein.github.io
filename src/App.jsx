@@ -3,6 +3,7 @@ import DataImage from "./data";
 import { listTools, listProject } from "./data";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProjectCategory from "./components/ProjectCategory";
 
 function App() {
   useEffect(() => {
@@ -149,7 +150,7 @@ function App() {
           >
             Tools yang saya gunakan untuk pengembangan program:
           </p>
-          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 px-5">
+          <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-2 px-3">
             {listTools.map((tool) => (
               <div
                 key={tool.id}
@@ -162,12 +163,12 @@ function App() {
                 <img
                   src={tool.gambar}
                   alt={tool.nama}
-                  className="w-14 bg-gray-200 p-1 group-hover:bg-cyan-700 border border-cyan-800 rounded-lg"
+                  className="w-10 sm:w-14 bg-gray-200 p-1 group-hover:bg-cyan-700 border border-cyan-800 rounded-lg"
                   loading="lazy"
                 />
                 <div className="flex flex-col">
-                  <h4 className="font-bold text-lg">{tool.nama}</h4>
-                  <p className="text-lg text-cyan-700 group-hover:text-white">
+                  <h4 className="font-bold text-sm text-lg">{tool.nama}</h4>
+                  <p className="text-sm text-lg text-cyan-700 group-hover:text-white">
                     {tool.ket}
                   </p>
                 </div>
@@ -176,63 +177,7 @@ function App() {
           </div>
         </div>
         {/* ini berisi project */}
-        <div className="mt-32 py-10" id="project">
-          <h1
-            className="text-center text-4xl font-bold mb-2"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-once="true"
-          >
-            Project
-          </h1>
-          <p
-            className="text-base-loose text-center opacity-70"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-            data-aos-once="true"
-          >
-            Berikut ini project yang telah selesai dibuat
-          </p>
-          <div className="project-box mt-14 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-3">
-            {listProject.map((project) => (
-              <div
-                key={project.id}
-                className="p-4 bg-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={project.delay}
-                data-aos-once="true"
-              >
-                <img src={project.gambar} alt="Project Image" loading="lazy" />
-                <div>
-                  <h1 className="text-2xl font-bold my-4">{project.nama}</h1>
-                  <p className="text-base-loose mb-4">{project.desk}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tools.map((tool, index) => (
-                      <p
-                        className="bg-gray-200 py-1 px-3 border border-cyan-700 rounded-md font-semibold"
-                        key={index}
-                      >
-                        {tool}
-                      </p>
-                    ))}
-                  </div>
-                  <div className="mt-8 text-center">
-                    <a
-                      href={project.demourl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p=3 rounded-lg block border hover:bg-cyan-700 hover:text-white transition duration-300 bg-gray-200 text-cyan-700 font-semibold text-lg text-center"
-                    >
-                      Lihat Project <i className="ri-external-link-line"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ProjectCategory />
         {/* ini berisi kontak */}
         <div className="kontak mt-32 py-10" id="kontak">
           <h1

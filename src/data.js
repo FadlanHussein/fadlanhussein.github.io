@@ -105,9 +105,28 @@ import Project4 from "/assets/project/proyek4.webp";
 import Project5 from "/assets/project/proyek5.webp";
 import Project6 from "/assets/project/proyek6.webp";
 
+export const projectCategory = [
+  {
+    id: 1,
+    name: "Web Development",
+    slug: "web-dev",
+  },
+  {
+    id: 2,
+    name: "Data Analysis",
+    slug: "data-analysis",
+  },
+  {
+    id: 3,
+    name: "HR Projects",
+    slug: "hr-projects",
+  },
+];
+
 export const listProject = [
   {
     id: 1,
+    category: "web-dev",
     gambar: Project1,
     nama: "Digital Clock",
     desk: "Berikut ini adalah contoh proyek jam digital sederhana",
@@ -116,7 +135,8 @@ export const listProject = [
     demourl: "https://task-15-digital-clock.vercel.app/",
   },
   {
-    id: 2,
+    id: 1,
+    category: "data-analysis",
     gambar: Project2,
     nama: "Company Profile",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
@@ -124,7 +144,8 @@ export const listProject = [
     delay: "300",
   },
   {
-    id: 3,
+    id: 1,
+    category: "hr-projects",
     gambar: Project3,
     nama: "Web Pernikahan 2.0",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
