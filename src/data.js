@@ -132,7 +132,7 @@ export const listProject = [
     desk: "Berikut ini adalah contoh proyek jam digital sederhana",
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
-    demourl: "https://task-15-digital-clock.vercel.app/",
+    demourl: "https://project-pages-cyan.vercel.app/",
   },
   {
     id: 1,
