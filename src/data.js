@@ -100,7 +100,7 @@ export const listTools = [
 
 import Project1 from "/assets/project/proyek1.png";
 import Project2 from "/assets/project/proyek2.png";
-import Project3 from "/assets/project/proyek3.webp";
+import Project3 from "/assets/project/proyek3.png";
 import Project4 from "/assets/project/proyek4.webp";
 import Project5 from "/assets/project/proyek5.webp";
 import Project6 from "/assets/project/proyek6.webp";
@@ -143,6 +143,16 @@ export const listProject = [
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
     demourl: "https://shopping-shop-beryl.vercel.app/",
+  },
+  {
+    id: 2,
+    category: "web-dev",
+    gambar: Project2,
+    nama: "Calculator",
+    desk: "Berikut ini adalah contoh proyek kalkulator sederhana",
+    tools: ["HTML", "CSS", "Javascript"],
+    delay: "200",
+    demourl: "https://fadlan-calculator.vercel.app/",
   },
   {
     id: 1,
