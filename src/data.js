@@ -145,7 +145,7 @@ export const listProject = [
     demourl: "https://shopping-shop-beryl.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     category: "web-dev",
     gambar: Project2,
     nama: "Calculator",
