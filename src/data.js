@@ -147,7 +147,7 @@ export const listProject = [
   {
     id: 3,
     category: "web-dev",
-    gambar: Project2,
+    gambar: Project3,
     nama: "Calculator",
     desk: "Berikut ini adalah contoh proyek kalkulator sederhana",
     tools: ["HTML", "CSS", "Javascript"],
