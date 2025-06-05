@@ -47,12 +47,11 @@ function App() {
             memberikan dampak positif dan effisien pada bidang Human Resources.
             Saya tertarik dalam bidang asessment, recruitment, dan pengembangan
             sumber daya manusia berbasis digitalisasi. Saya juga memiliki
-            ketertarikan dalam bidang pengembangan aplikasi web, khususnya dalam
-            pengembangan aplikasi web yang berfokus pada user experience dan
-            user interface. Saya sedang meningkatkan skill dalam menggunakan
-            berbagai teknologi web seperti HTML, CSS, JavaScript, dan ReactJS.
-            Sedangkan ui/ux saya cukup mahir menggunakan Corel DrawX7, Figma dan
-            Canva.
+            ketertarikan dalam bidang pengembangan aplikasi web yang berfokus
+            pada user experience dan user interface. Saya sedang meningkatkan
+            skill dalam menggunakan berbagai teknologi web seperti HTML, CSS,
+            JavaScript, dan ReactJS. Sedangkan ui/ux saya cukup mahir
+            menggunakan Corel DrawX7, Figma dan Canva.
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
@@ -258,7 +257,7 @@ function App() {
                   cols="30"
                   rows="10"
                   placeholder="Masukkan pesan Anda"
-                  className="w-full border-2 border-cyan-700 rounded-lg p-4 text-lg focus:outline-none focus:ring-2 focus:ring-cyan-700 transition duration-300"
+                  className="w-full border-2 border-cyan-700 rounded-lg p-2 text-base  focus:outline-none focus:ring-2 focus:ring-cyan-700 transition duration-300 sm:p-4 sm:text-lg md:p-6 md:text-xl lg:w-3/4 lg:mx-auto lg:text-2xl focus:outline-none focus:ring-2 focus:ring-cyan-700 transition duration-300"
                   required
                 ></textarea>
               </div>

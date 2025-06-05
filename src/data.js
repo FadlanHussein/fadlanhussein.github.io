@@ -99,7 +99,7 @@ export const listTools = [
 ];
 
 import Project1 from "/assets/project/proyek1.png";
-import Project2 from "/assets/project/proyek2.webp";
+import Project2 from "/assets/project/proyek2.png";
 import Project3 from "/assets/project/proyek3.webp";
 import Project4 from "/assets/project/proyek4.webp";
 import Project5 from "/assets/project/proyek5.webp";
@@ -132,7 +132,17 @@ export const listProject = [
     desk: "Berikut ini adalah contoh proyek jam digital sederhana",
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
-    demourl: "https://project-pages-cyan.vercel.app/",
+    demourl: "https://digital-clock-five-blue.vercel.app/",
+  },
+  {
+    id: 2,
+    category: "web-dev",
+    gambar: Project2,
+    nama: "Shopping Shop",
+    desk: "Berikut ini adalah contoh proyek toko online sederhana",
+    tools: ["HTML", "CSS", "Javascript"],
+    delay: "200",
+    demourl: "https://shopping-shop-beryl.vercel.app/",
   },
   {
     id: 1,
