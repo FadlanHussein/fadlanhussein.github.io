@@ -104,6 +104,7 @@ import Project3 from "/assets/project/proyek3.png";
 import Project4 from "/assets/project/proyek4.webp";
 import Project5 from "/assets/project/proyek5.webp";
 import Project6 from "/assets/project/proyek6.webp";
+import Projectbi1 from "/assets/project/proyek1data.png";
 
 export const projectCategory = [
   {
@@ -132,6 +133,7 @@ export const listProject = [
     desk: "Berikut ini adalah contoh proyek jam digital sederhana",
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
+    type: "web",
     demourl: "https://digital-clock-five-blue.vercel.app/",
   },
   {
@@ -142,6 +144,7 @@ export const listProject = [
     desk: "Berikut ini adalah contoh proyek toko online sederhana",
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
+    type: "web",
     demourl: "https://shopping-shop-beryl.vercel.app/",
   },
   {
@@ -152,12 +155,13 @@ export const listProject = [
     desk: "Berikut ini adalah contoh proyek kalkulator sederhana",
     tools: ["HTML", "CSS", "Javascript"],
     delay: "200",
+    type: "web",
     demourl: "https://fadlan-calculator.vercel.app/",
   },
   {
     id: 1,
     category: "data-analysis",
-    gambar: Project2,
+    gambar: Projectbi1,
     nama: "Company Profile",
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
@@ -171,6 +175,8 @@ export const listProject = [
     desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
     tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
     delay: "400",
+    type: "document",
+    pdfUrl: "/assets/documents/HR-People-Analytics-Presentations.pdf",
   },
   {
     id: 4,

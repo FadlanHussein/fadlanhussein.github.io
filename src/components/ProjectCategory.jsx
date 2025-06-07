@@ -1,9 +1,28 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projectCategory, listProject } from "../data";
 
 const ProjectCategory = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Cek apakah perangkat mobile
+  // Menggunakan useEffect untuk mendeteksi perangkat mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mobile =
+        /android|blackberry|iemobile|ipad|iphone|ipod|opera mini|webos/i.test(
+          userAgent
+        );
+      setIsMobile(mobile);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   // Filter projects berdasarkan kategori yang dipilih
   const filteredProjects = selectedCategory
@@ -98,6 +117,14 @@ const ProjectCategory = () => {
                     Lihat Project
                   </button>
                 )}
+                {project.pdfUrl && (
+                  <button
+                    onClick={() => handleProjectClick(project)}
+                    className="inline-block px-4 py-2 bg-cyan-700 text-white rounded-lg hover:bg-cyan-800"
+                  >
+                    Lihat Project
+                  </button>
+                )}
               </div>
             ))}
           </div>
@@ -128,6 +155,22 @@ const ProjectCategory = () => {
                     src={selectedProject.demourl}
                     title={selectedProject.nama}
                     className="w-full h-[500px] rounded-lg border"
+                  />
+                </div>
+              )}
+
+              {/* PDF Handler - Mobile dan Desktop */}
+              {selectedProject.pdfUrl && (
+                <div className="mb-6">
+                  PDF mungkin tidak tampil di beberapa perangkat mobile. Silakan
+                  buka di tab baru atau download.
+                  <br />
+                  <embed
+                    src={selectedProject.pdfUrl}
+                    type="application/pdf"
+                    title={selectedProject.nama}
+                    className="w-full aspect-video rounded-lg" // atau aspect-[4/3]
+                    style={{ border: "none", outline: "none" }}
                   />
                 </div>
               )}
@@ -168,6 +211,27 @@ const ProjectCategory = () => {
                     <i className="ri-external-link-line"></i>
                     Buka di Tab Baru
                   </a>
+                )}
+                {selectedProject.pdfUrl && (
+                  <>
+                    <a
+                      href={selectedProject.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 flex items-center gap-2"
+                    >
+                      <i className="ri-file-pdf-line"></i>
+                      {isMobile ? "Buka PDF" : "Buka di Tab Baru"}
+                    </a>
+                    <a
+                      href={selectedProject.pdfUrl}
+                      download="document.pdf"
+                      className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2"
+                    >
+                      <i className="ri-download-line"></i>
+                      Download
+                    </a>
+                  </>
                 )}
                 {selectedProject.github && (
                   <a
