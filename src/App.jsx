@@ -55,7 +55,7 @@ function App() {
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a
-              href="/public/assets/CV/CV-Fadlan Hussein Al Utsman.pdf"
+              href="assets/CV/CV-Fadlan Hussein Al Utsman.pdf"
               download="CV-Fadlan Hussein Al Utsman.pdf"
               className="bg-cyan-700 text-white p-2 rounded-2xl font-normal hover:bg-cyan-800 transition duration-300 flex items-center gap-2"
               onClick={handleDownload}
