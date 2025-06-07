@@ -73,13 +73,13 @@ function App() {
         <img
           src={DataImage.HeroImage}
           alt="Fadlan Image"
-          className="w-[600px] rounded-lg mt-20 md:mt-0 md:self-center mx-auto animate__animated animate__fadeInUp animate__delay-4s"
+          className="hidden md:block w-[600px] rounded-lg mt-20 md:mt-0 md:self-center mx-auto animate__animated animate__fadeInUp animate__delay-4s"
           loading="lazy"
         />
       </div>
 
       {/* ini berisi tentang */}
-      <div className="tentang mt-16 py-5" id="tentang">
+      <div className="tentang mt-0 py-5" id="tentang">
         <div
           className="w-full md:w-2/3 lg:w-3/4 mx-auto p-7 bg-gray-200 rounded-lg"
           data-aos="fade-up"
